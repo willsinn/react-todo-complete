@@ -28,7 +28,7 @@ class App extends Component {
 
   handleDelete(itemToBeDeleted) {
     var newItems = this.state.items.filter((_item) => {
-      return _item != itemToBeDeleted
+      return _item !== itemToBeDeleted
     });
     this.setState({ items: newItems });
   }
