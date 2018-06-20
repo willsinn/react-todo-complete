@@ -9,6 +9,13 @@ class DisplayItem extends Component {
   }
 
 
+    handleOnChange() {
+      var _done = !this.state.done;
+      this.setState( {done:_done} );
+    }
+
+
+
   render(){
     var item = this.props.item;
 
@@ -26,7 +33,7 @@ class DisplayItem extends Component {
                       [X]
                     </a>
              </li>
-    })}
+    
       </div>
     );
   }

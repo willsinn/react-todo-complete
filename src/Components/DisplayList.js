@@ -4,16 +4,6 @@ import DisplayItem from './DisplayItem';
 
 class DisplayList extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-  handleOnChange() {
-    var _done = !this.state.done;
-    this.setState( {done:_done} );
-  }
-
-
 
   render() {
     return(
