@@ -3,29 +3,18 @@ import React, { Component } from 'react';
 
 
 class DisplayTodo extends Component {
-  constructor(props){
-    super(props);
-    this.state = { done: false };
-  }
-
-
-    handleDone() {
-      var _done = !this.state.done;
-      this.setState( {done:_done} );
-    }
-
-
 
   render(){
-    var title = this.props.title;
+    var todo = this.props.todo;
+    var title = todo.title;
 
     return(
       <div>
              <li>
 
                   <input
-                     checked={this.state.done}
-                     onChange={this.handleDone.bind(this)}
+                     checked={todo.done}
+                     onChange={this.props.handleDone.bind(null, title)}
                      type="checkbox"
                      style={{ fontSize: 'x-large' }}
                   />

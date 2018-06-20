@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       title: '',
-      todos: []
+      todos: [{ title: '', done:false }]
     }
   }
 
@@ -15,6 +15,25 @@ class App extends Component {
     var title = event.target.value;
     this.setState({ title: title });
 
+  }
+
+  handleDelete(titleToBeDeleted) {
+    var newTodos = this.state.todos.filter((todo) => {
+      return todo.title !== titleToBeDeleted
+    });
+    this.setState({ todos: newTodos });
+  }
+
+  handleDone(titleToBeMarkedDone) {
+    var _todos = this.state.todos;
+
+    var todo = _todos.filter((todo) => {
+      return todo.title === titleToBeMarkedDone;
+    })[0];
+
+    todo.done = !todo.done;
+
+    this.setState({ todos: _todos });
   }
 
   handleSubmit(event) {
@@ -26,12 +45,7 @@ class App extends Component {
 
   }
 
-  handleDelete(titleToBeDeleted) {
-    var newtodos = this.state.todos.filter((todo) => {
-      return todo.title !== titleToBeDeleted
-    });
-    this.setState({ todos: newtodos });
-  }
+
 
 
   render() {
@@ -57,6 +71,7 @@ class App extends Component {
         </p>
 
         <DisplayList
+          handleDone={this.handleDone.bind(this)}
           handleDelete={this.handleDelete.bind(this)}
           todos={this.state.todos}
 
