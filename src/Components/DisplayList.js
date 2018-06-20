@@ -8,11 +8,11 @@ class DisplayList extends Component {
   render() {
     return(
       <ul>
-      { this.props.todos.map((title, i) => {
+      { this.props.todos.map((todo, i) => {
         return <DisplayTodo
-                key={ title }
-                handleDelete={this.props.handleDelete.bind(null, title)}
-                title={title}
+                key={todo.title}
+                title={todo.title}
+                handleDelete={this.props.handleDelete.bind(null, todo.title)}
                 />
       })}
       </ul>

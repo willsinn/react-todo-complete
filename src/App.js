@@ -21,14 +21,14 @@ class App extends Component {
     event.preventDefault();
 
     var title = this.state.title;
-    var newtodos = this.state.todos.concat(title);
+    var newtodos = this.state.todos.concat({title: title, done: false });
     this.setState({ title: '', todos: newtodos });
 
   }
 
   handleDelete(titleToBeDeleted) {
-    var newtodos = this.state.todos.filter((_title) => {
-      return _title !== titleToBeDeleted
+    var newtodos = this.state.todos.filter((todo) => {
+      return todo.title !== titleToBeDeleted
     });
     this.setState({ todos: newtodos });
   }
@@ -53,12 +53,13 @@ class App extends Component {
 
         <p className="Done-Todos">
           Number of done Todos:
-          { this.state.todos.filter((title) => { return title.done }).length }
+          { this.state.todos.filter((todo) => { return todo.done }).length }
         </p>
 
         <DisplayList
           handleDelete={this.handleDelete.bind(this)}
           todos={this.state.todos}
+
         />
       </div>
     );
