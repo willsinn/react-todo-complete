@@ -8,9 +8,16 @@ class DisplayList extends Component {
 
   render() {
     return(
-      <div>
-      { this.props.items.toString() }
-      </div>
+      <ul>
+      { this.props.items.map((item, i) => {
+        return <li key={ item }>
+                       { item }
+                       <a href="#" onClick= { this.props.handleDelete.bind(null, item)}>
+                        [X]
+                      </a>
+               </li>
+      })}
+      </ul>
 
     );
   }

@@ -11,19 +11,28 @@ class App extends Component {
     }
   }
 
+  handleChange(event) {
+    var text = event.target.value;
+    this.setState({ text: text });
+
+  }
+
   handleSubmit(event) {
     event.preventDefault();
 
     var text = this.state.text;
     var newItems = this.state.items.concat(text);
     this.setState({ text: '', items: newItems });
-  }
-
-  handleChange (event) {
-    var text = event.target.value;
-    this.setState({ text: text });
 
   }
+
+  handleDelete(itemToBeDeleted) {
+    var newItems = this.state.items.filter((_item) => {
+      return _item != itemToBeDeleted
+    });
+    this.setState({ items: newItems });
+  }
+
 
   render() {
     return (
@@ -36,10 +45,10 @@ class App extends Component {
             Submit
           </button>
         </form>
-        
-        <DisplayList
-          items={this.state.items}
 
+        <DisplayList
+          handleDelete={this.handleDelete.bind(this)}
+          items={this.state.items}
         />
       </div>
     );
