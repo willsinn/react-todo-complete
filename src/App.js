@@ -1,18 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DisplayList from './Components/DisplayList';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+      items: []
+    }
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    var text = this.state.text;
+    var newItems = this.state.items.concat(text);
+    this.setState({ text: '', items: newItems });
+  }
+
+  handleChange (event) {
+    var text = event.target.value;
+    this.setState({ text: text });
+
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <p> TODOS </p>
+
+        <form onSubmit={this.handleSubmit.bind(this)} >
+          <input onChange={this.handleChange.bind(this)} value={this.state.text} />
+          <button>
+            Submit
+          </button>
+        </form>
+        
+        <DisplayList
+          items={this.state.items}
+
+        />
       </div>
     );
   }
