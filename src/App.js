@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       title: '',
-      todos: [{ title: '', done:false }]
+      todos: [{title: '' ,done: false }]
     }
   }
 
@@ -15,6 +15,11 @@ class App extends Component {
     var title = event.target.value;
     this.setState({ title: title });
 
+  }
+
+  handleClearCompleted (event) {
+    var newTodos = this.state.todos.filter( (todo) => {return !todo.done});
+    this.setState({ todos: newTodos });
   }
 
   handleDelete(titleToBeDeleted) {
@@ -61,13 +66,18 @@ class App extends Component {
         </form>
 
         <p className="Total-Todos">
-          Number of total Todos:
+          ALL :
           { this.state.todos.length }
         </p>
 
         <p className="Done-Todos">
-          Number of done Todos:
-          { this.state.todos.filter((todo) => { return todo.done }).length }
+          COMPLETED:
+          { this.state.todos.filter((todo) => { return todo.done }).length } |
+          PENDING:
+          { this.state.todos.filter((todo) => { return !todo.done }).length } |
+            <a href='#' onClick={ this.handleClearCompleted.bind(this)} >
+             CLEAR COMPLETED
+             </a>
         </p>
 
         <DisplayList
