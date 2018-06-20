@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 
 
-class DisplayItem extends Component {
+class DisplayTodo extends Component {
   constructor(props){
     super(props);
     this.state = { done: false };
   }
 
 
-    handleOnChange() {
+    handleDone() {
       var _done = !this.state.done;
       this.setState( {done:_done} );
     }
@@ -17,26 +17,27 @@ class DisplayItem extends Component {
 
 
   render(){
-    var item = this.props.item;
+    var title = this.props.title;
 
     return(
       <div>
              <li>
 
-                     <input
+                  <input
                      checked={this.state.done}
-                     onChange={this.handleOnChange.bind(this)}
+                     onChange={this.handleDone.bind(this)}
                      type="checkbox"
-                     style={{ fontSize: 'x-large' }} />
-                     { item }
-                     <a href="#" onClick= { this.props.handleDelete.bind(null, item)}>
+                     style={{ fontSize: 'x-large' }}
+                  />
+                     { title }
+                     <a href="#" onClick= { this.props.handleDelete.bind(null, title)}>
                       [X]
                     </a>
              </li>
-    
+
       </div>
     );
   }
 }
 
-export default DisplayItem;
+export default DisplayTodo;

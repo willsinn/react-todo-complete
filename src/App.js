@@ -6,31 +6,31 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
-      items: []
+      title: '',
+      todos: []
     }
   }
 
   handleChange(event) {
-    var text = event.target.value;
-    this.setState({ text: text });
+    var title = event.target.value;
+    this.setState({ title: title });
 
   }
 
   handleSubmit(event) {
     event.preventDefault();
 
-    var text = this.state.text;
-    var newItems = this.state.items.concat(text);
-    this.setState({ text: '', items: newItems });
+    var title = this.state.title;
+    var newtodos = this.state.todos.concat(title);
+    this.setState({ title: '', todos: newtodos });
 
   }
 
-  handleDelete(itemToBeDeleted) {
-    var newItems = this.state.items.filter((_item) => {
-      return _item !== itemToBeDeleted
+  handleDelete(titleToBeDeleted) {
+    var newtodos = this.state.todos.filter((_title) => {
+      return _title !== titleToBeDeleted
     });
-    this.setState({ items: newItems });
+    this.setState({ todos: newtodos });
   }
 
 
@@ -40,15 +40,25 @@ class App extends Component {
       <p> TODOS </p>
 
         <form onSubmit={this.handleSubmit.bind(this)} >
-          <input onChange={this.handleChange.bind(this)} value={this.state.text} />
+          <input onChange={this.handleChange.bind(this)} value={this.state.title} />
           <button>
             Submit
           </button>
         </form>
 
+        <p className="Total-Todos">
+          Number of total Todos:
+          { this.state.todos.length }
+        </p>
+
+        <p className="Done-Todos">
+          Number of done Todos:
+          { this.state.todos.filter((title) => { return title.done }).length }
+        </p>
+
         <DisplayList
           handleDelete={this.handleDelete.bind(this)}
-          items={this.state.items}
+          todos={this.state.todos}
         />
       </div>
     );
