@@ -55,37 +55,44 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-      <p> TODOS </p>
+      <div className="app-container">
+      <h1 className="app-title"> TODOS </h1>
 
         <form onSubmit={this.handleSubmit.bind(this)} >
           <input onChange={this.handleChange.bind(this)} value={this.state.title} />
-          <button>
-            Submit
-          </button>
+          <button> Submit </button>
         </form>
 
-        <p className="Total-Todos">
-          ALL :
-          { this.state.todos.length }
-        </p>
-
-        <p className="Done-Todos">
-          COMPLETED:
-          ({ this.state.todos.filter((todo) => { return todo.done }).length }) |
-          PENDING:
-          ({ this.state.todos.filter((todo) => { return !todo.done }).length }) |
-            <a href='/' onClick={ this.handleClearCompleted.bind(this)} >
-             CLEAR COMPLETED
-             </a>
-        </p>
 
         <DisplayList
           handleDone={this.handleDone.bind(this)}
           handleDelete={this.handleDelete.bind(this)}
           todos={this.state.todos}
-
         />
+
+
+        <div className="todos-status-container">
+          <p className="todos-status-all">
+          ALL
+          </p>
+          <p className="number-counter-all">{ this.state.todos.length }</p>
+
+          <p className="todos-status-pending">
+          PENDING
+          </p>
+          <p className="number-counter-pending">{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+
+          <p className="todos-status-completed">
+          COMPLETED
+          </p>
+          <p className="number-counter-completed">{ this.state.todos.filter((todo) => { return todo.done }).length }</p>
+
+          <p className="todos-clear-completed">
+            <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
+              CLEAR
+            </a>
+          </p>
+        </div>
       </div>
     );
   }
