@@ -56,11 +56,11 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-      <h1 className="app-title"> TODOS </h1>
+      <h1 className="app-title"> To do your Todos, it needs to be DONE. </h1>
 
-        <form onSubmit={this.handleSubmit.bind(this)} >
-          <input onChange={this.handleChange.bind(this)} value={this.state.title} />
-          <button> Submit </button>
+        <form className="form-add-container" onSubmit={this.handleSubmit.bind(this)} >
+          <input className="input-add" placeholder="JUST DO IT!" onChange={this.handleChange.bind(this)} value={this.state.title} />
+          <button className="button-add"> To. Be. Done. </button>
         </form>
 
 
