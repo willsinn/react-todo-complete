@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DisplayItem from './DisplayItem';
 
-
 class DisplayList extends Component {
 
 
