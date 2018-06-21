@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DisplayTodo from './DisplayTodo';
+import DisplayItem from './DisplayItem';
 
 
 class DisplayList extends Component {
@@ -10,12 +10,12 @@ class DisplayList extends Component {
     return(
       <ul>
       { this.props.todos.map((todo, i) => {
-        return <DisplayTodo
+        return  <DisplayItem
                 key={todo.title}
                 todo={todo}
-                handleDone={this.props.handleDone.bind(null, todo.title)}
-                handleDelete={this.props.handleDelete.bind(null, todo.title)}
-                />
+                handleDone={this.props.handleDone}
+                handleDelete={this.props.handleDelete}
+                />;
       })}
       </ul>
     );

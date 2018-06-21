@@ -14,7 +14,8 @@ class DisplayItem extends Component {
   }
 
   handleEditing(event) {
-    this.setState({ editing: true, changedText: this.props.todo.title })
+
+    this.setState({ editing: true, changedText: this.props.todo.title });
   }
 
   handleEditingDone(event) {
@@ -51,10 +52,10 @@ class DisplayItem extends Component {
                      type="checkbox"
                      style={{ fontSize: 'x-large' }}
                   />
-                  <label>
+
                      { this.state.changedText }
-                  </label>
-                  <a href="#" onClick= { this.props.handleDelete.bind(null, todo.title)}>
+
+                  <a href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
                       [X]
                     </a>
                 </div>
@@ -72,12 +73,6 @@ class DisplayItem extends Component {
   }
 
 
-}
-
-DisplayItem.propTypes = {
-  todo: React.PropTypes.object.isRequired,
-  handleDone: React.PropTypes.func.isRequired,
-  handleDelete: React.PropTypes.func.isRequired
 }
 
 

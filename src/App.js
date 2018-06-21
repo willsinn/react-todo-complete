@@ -75,7 +75,7 @@ class App extends Component {
           ({ this.state.todos.filter((todo) => { return todo.done }).length }) |
           PENDING:
           ({ this.state.todos.filter((todo) => { return !todo.done }).length }) |
-            <a href='#' onClick={ this.handleClearCompleted.bind(this)} >
+            <a href='/' onClick={ this.handleClearCompleted.bind(this)} >
              CLEAR COMPLETED
              </a>
         </p>
