@@ -14,29 +14,34 @@
 }
 
 .todos-container {
-  width: 800px;
-  height: 800px;
+  min-height: 125px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
 
 }
 
 .todos-list {
-  width: 550px;
-  height: 600px;
+  width: 53%;
   display: flex;
+  background-color: white;
   flex-direction: column;
+  margin: auto;
+
 }
 
 
 /* TODOS status FLEXBOX COLUMNS */
 
 .todos-status-container {
-  width: 250px;
   height: 125px;
+  width: 27%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: auto;
 }
 
 /* ROW 1
