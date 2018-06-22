@@ -51,14 +51,14 @@ class DisplayItem extends Component {
                   <input className="item-done-checkbox"
                      checked={todo.done}
                      onChange={this.props.handleDone.bind(null, todo.title)}
-                     type="checkbox"
-                     style={{ fontSize: 'x-large' }}
+                     type ="checkbox"
+
                   />
                   <label>
                      { this.state.changedText }
-                  </label>   
+                  </label>
                   <a className="item-destroy-button" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
-                      [X]
+                  <i class="fas fa-minus-circle"></i>
                     </a>
                 </div>
 

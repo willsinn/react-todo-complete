@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   padding-left: 2%;
   padding-right: 2%;
 
@@ -37,7 +38,7 @@
 /* TODOS status FLEXBOX COLUMNS */
 
 .todos-status-container {
-  height: 125px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   flex: 2 20%;
@@ -55,6 +56,7 @@
   height: 25px;
   margin: auto;
   justify-content: center;
+  padding: 1%;
 
 }
 
@@ -63,6 +65,8 @@
   height: 25px;
   font-size: 20px;
   background-color: purple;
+  border-radius: 10px;
+  border: 3px solid white;
 
 }
 
@@ -85,6 +89,8 @@
   height: 25px;
   margin: auto;
   justify-content: center;
+  padding: 1%;
+
 
 }
 
@@ -93,6 +99,8 @@
   height: 25px;
   font-size: 20px;
   background-color: yellow;
+  border-radius: 10px;
+  border: 3px solid white;
 
 
 }
@@ -118,6 +126,8 @@
   height: 25px;
   margin: auto;
   justify-content: center;
+  padding: 1%;
+
 
 }
 
@@ -128,6 +138,8 @@
   height: 25px;
   font-size: 20px;
   background-color: green;
+  border-radius: 10px;
+  border: 3px solid white;
 
 }
 
@@ -148,8 +160,9 @@ Clear Completed Todos */
   flex-direction: row;
   width: 250px;
   height:25px;
-  margin:auto;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 5%;
+
 
 }
 
@@ -160,6 +173,7 @@ Clear Completed Todos */
   font-size: 20px;
   border-radius: 10px;
   border: 3px solid white;
+
 }
 
 .todos-clear-completed a {
