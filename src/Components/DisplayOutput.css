@@ -1,0 +1,46 @@
+.display-list {
+    background: #3399ff;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: inherit;
+    text-align: left;
+    font-size: 25px;
+
+}
+
+li {
+  padding: 1px;
+  
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+
+}
+
+.item-done-checkbox {
+    flex: 1;
+    flex-grow: 1;
+    margin: auto;
+    align-content: center;
+  }
+
+label {
+    flex: 2;
+    flex-grow: 13;
+    margin: auto;
+    background: white;
+    height: 30px;
+    border: 5px ridge blue;
+
+}
+
+.item-destroy-button {
+    flex: 3;
+    flex-grow: 1;
+    margin: auto;
+
+  }

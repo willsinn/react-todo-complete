@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DisplayItem from './DisplayItem';
+import './DisplayOutput.css';
 
 class DisplayList extends Component {
 
@@ -7,7 +8,7 @@ class DisplayList extends Component {
   render() {
 
     return(
-      <ul>
+      <ul className="display-list">
       { this.props.todos.map((todo, i) => {
         return  <DisplayItem
                 key={todo.title}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './DisplayOutput.css';
 
 
 
@@ -45,18 +46,18 @@ class DisplayItem extends Component {
 
     return(
 
-             <li className= {todo.done ? 'done': ''}>
-              <div style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
-                  <input
+             <li className={todo.done ? 'done': ''}>
+              <div className="item-container" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
+                  <input className="item-done-checkbox"
                      checked={todo.done}
                      onChange={this.props.handleDone.bind(null, todo.title)}
                      type="checkbox"
                      style={{ fontSize: 'x-large' }}
                   />
-
+                  <label>
                      { this.state.changedText }
-
-                  <a href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
+                  </label>   
+                  <a className="item-destroy-button" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
                       [X]
                     </a>
                 </div>

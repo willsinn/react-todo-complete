@@ -18,17 +18,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
 
 
 }
 
 .todos-list {
-  width: 53%;
   display: flex;
   background-color: white;
   flex-direction: column;
   margin: auto;
+  flex: 1 80%;
 
 }
 
@@ -37,11 +38,11 @@
 
 .todos-status-container {
   height: 125px;
-  width: 27%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  flex: 2 20%;
   margin: auto;
+
 }
 
 /* ROW 1
@@ -53,6 +54,7 @@
   width: 250px;
   height: 25px;
   margin: auto;
+  justify-content: center;
 
 }
 
@@ -61,7 +63,6 @@
   height: 25px;
   font-size: 20px;
   background-color: purple;
-
 
 }
 
@@ -83,6 +84,8 @@
   width: 250px;
   height: 25px;
   margin: auto;
+  justify-content: center;
+
 }
 
 .todos-status-pending {
@@ -114,6 +117,8 @@
   width: 250px;
   height: 25px;
   margin: auto;
+  justify-content: center;
+
 }
 
 
@@ -123,7 +128,6 @@
   height: 25px;
   font-size: 20px;
   background-color: green;
-
 
 }
 
@@ -135,14 +139,7 @@
   border: 3px solid white;
   background-color: green;
 
-
 }
-
-
-
-
-
-
 
 /* ROW 4
 Clear Completed Todos */
@@ -152,6 +149,8 @@ Clear Completed Todos */
   width: 250px;
   height:25px;
   margin:auto;
+  justify-content: center;
+
 }
 
 .todos-clear-completed {
@@ -174,7 +173,7 @@ Clear Completed Todos */
   display:flex;
   justify-content: space-around;
   flex-flow: row;
-  padding-left: 5%;
+  padding-left: 2%;
   padding-right: 5%;
 }
 
@@ -183,8 +182,6 @@ Clear Completed Todos */
   font-size: 30px;
   text-align: center;
   height: 40px;
-
-
 }
 
 .button-add {
@@ -192,6 +189,4 @@ Clear Completed Todos */
   height: 47px;
   font-size: 19px;
   border-radius: 20px;
-
-
 }
