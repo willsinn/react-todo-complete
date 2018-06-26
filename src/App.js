@@ -57,13 +57,20 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-      <h1 className="app-title"> To do your Todos, it needs to be DONE. </h1>
+      <h1 className="app-title"> To do your Todos, it needs to be DONE.
+      <hr />
+      </h1>
+
 
         <form className="form-add-container" onSubmit={this.handleSubmit.bind(this)} >
           <input className="input-add" placeholder="What needs to be done?" onChange={this.handleChange.bind(this)} value={this.state.title} />
           <button className="button-add"> To. Be. Done. </button>
         </form>
 
+      <div className="app-labels">
+        <h2 className="list-label"> Your current todos </h2>
+        <h2 className="status-label"> Your todos status </h2>
+      </div>
 
 
       <div className="todos-container">
@@ -99,6 +106,7 @@ class App extends Component {
             </div>
 
             <div className="row-4">
+            <h3 className="clear-label"> Clear Completed Todos </h3>
             <p className="todos-clear-completed">
               <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
                 CLEAR

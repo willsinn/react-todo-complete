@@ -2,26 +2,52 @@
   text-align: center;
   height: 800px;
   max-width: 800px;
-  background-color: blue;
   display: flex;
   flex-direction: column;
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
+
+
 .app-title {
-  text-decoration: underline;
+  font-family: kaushan-script, cursive;
   font-size: 45px;
   font-weight: 600;
 }
 
+.app-title hr {
+  display: block;
+  margin: auto;
+  border-width: 5px;
+
+}
+
+.app-labels {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  font-family: kaushan-script, cursive;
+  font-size: 22px;
+
+}
+
+.app-labels h2 {
+  margin: auto;
+  padding-left: 10%;
+
+}
+
+
+
 .todos-container {
-  min-height: 125px;
+  min-height: 130px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  padding-left: 2%;
-  padding-right: 2%;
-
+  padding: 2% 2% 2%;
 
 }
 
@@ -31,18 +57,24 @@
   flex-direction: column;
   margin: auto;
   flex: 1 80%;
+  font-family: source-sans-pro, sans-serif;
 
 }
 
+.items-container {
+}
 
-/* TODOS status FLEXBOX COLUMNS */
+
+/* TODOS status FLEXBOX COLUMNS for Row 1-4 */
 
 .todos-status-container {
   height: 150px;
   display: flex;
   flex-direction: column;
-  flex: 2 20%;
+  flex: 1 20%;
   margin: auto;
+  padding-top: 1%;
+  font-family: stencil-std, sans-serif;
 
 }
 
@@ -189,6 +221,8 @@ Clear Completed Todos */
   flex-flow: row;
   padding-left: 2%;
   padding-right: 5%;
+  font-family: devonshire, sans-serif;
+
 }
 
 .input-add {
@@ -196,11 +230,16 @@ Clear Completed Todos */
   font-size: 30px;
   text-align: center;
   height: 40px;
+  font-family: source-sans-pro, sans-serif;
+
 }
 
 .button-add {
-  flex: 2 10%;
+  flex: 1 10%;
   height: 47px;
-  font-size: 19px;
+  font-size: 17px;
   border-radius: 20px;
+  font-family: stencil-std, sans-serif;
+
+
 }
