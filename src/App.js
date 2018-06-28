@@ -86,7 +86,7 @@ class App extends Component {
         <div className="todos-status-container">
           <div className="row-1">
             <p className="todos-status-all">
-            ALL
+            TOTAL TODOS
             </p>
             <p className="number-counter-all">{ this.state.todos.length }</p>
           </div>
@@ -106,7 +106,7 @@ class App extends Component {
             </div>
 
             <div className="row-4">
-            <h3 className="clear-label"> Clear Completed Todos </h3>
+            <h3 className="clear-label"> Completed Todos? Take them off! </h3>
             <p className="todos-clear-completed">
               <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
                 CLEAR
