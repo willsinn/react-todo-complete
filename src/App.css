@@ -50,11 +50,14 @@ progress container and container content styles
 
 .total-todos {
   width: 50%;
+  border:1px solid black;
 
 }
 
 .pending-todos {
   width: 50%;
+  border:1px solid black;
+
 
 }
 
