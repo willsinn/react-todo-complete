@@ -8,7 +8,7 @@ class DisplayList extends Component {
   render() {
 
     return(
-      <ul className="display-list">
+      <ul>
       { this.props.todos.map((todo, i) => {
         return  <DisplayItem
                 key={todo.title}

@@ -47,22 +47,21 @@ class DisplayItem extends Component {
     return(
 
              <li className={todo.done ? 'done': ''}>
-              <div className="item-container" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
-                  <input className="item-done-checkbox"
+              <div style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
+                  <input
                      checked={todo.done}
                      onChange={this.props.handleDone.bind(null, todo.title)}
                      type ="checkbox"
-
                   />
                   <label>
                      { this.state.changedText }
                   </label>
-                  <a className="item-destroy-button" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
+                  <a href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
                   <i class="fas fa-minus-circle"></i>
                     </a>
                 </div>
 
-                <input type="text"
+                <input  type="text"
                         onKeyDown={this.handleEditingDone.bind(this)}
                         onChange={this.handleEditingChange.bind(this)}
                         style={editStyle}
