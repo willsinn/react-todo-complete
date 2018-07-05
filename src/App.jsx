@@ -56,8 +56,24 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <h1> To do your Todos, it needs to be DONE. </h1>
+      <div className="app-container">
+
+        <div className="header-container">
+
+          <div className="title-date-container">
+             <h1> Your Things </h1>
+             <h3> Current Date </h3>
+          </div>
+
+          <div className="progress-container">
+            <p> All Todos { this.state.todos.length }</p>
+            <p> Pending Todos{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+            <p> Completed Percentage </p>
+          </div>
+
+        </div>
+
+
         <form onSubmit={this.handleSubmit.bind(this)} >
           <input placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
           <button> Add </button>
@@ -70,13 +86,13 @@ class App extends Component {
           />
 
 
-            <p> All Todos { this.state.todos.length }</p>
-            <p> Pending Todos{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+
+
             <p> Finished Todos { this.state.todos.filter((todo) => { return todo.done }).length }</p>
               <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
                 CLEAR
               </a>
-       </div>
+      </div>
 
     );
   }
