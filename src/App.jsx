@@ -65,9 +65,13 @@ class App extends Component {
                   </div>
 
                   <div className="progress-container">
-                    <p> All Todos { this.state.todos.length }</p>
-                    <p> Pending Todos{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
-                    <p> Completed Percentage </p>
+                    <div className="total-pending-container">
+                      <p className="total-todos"> All Todos { this.state.todos.length }</p>
+                      <p className="pending-todos"> Pending Todos{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+                    </div>
+                    <div className="completed-percentage-container">
+                      <p className="completed-percentage"> Completed Percentage </p>
+                    </div>
                   </div>
         </div>
 
