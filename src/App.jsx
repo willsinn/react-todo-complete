@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import DisplayList from './Components/DisplayList';
+import HeaderBackground from './Images/HeaderBackground.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -55,10 +56,12 @@ class App extends Component {
 
 
   render() {
+
     return (
       <div className="app-container">
 
         <div className="header-container">
+                  <img className="header-background" src={HeaderBackground} />
                   <div className="title-date-container">
                      <h1> Your Things </h1>
                      <h3> Current Date </h3>
@@ -77,6 +80,7 @@ class App extends Component {
                       <p className="completed-percentage"> Completed Percentage </p>
                     </div>
                   </div>
+
         </div>
 
         <div className="content-container">
