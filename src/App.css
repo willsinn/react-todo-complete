@@ -6,6 +6,15 @@
 
 }
 
+/*
+
+header container and container content styles
+         FIRST BIG DIV
+    located: top section of App
+    contains: title-date-container
+              ,progress-container
+*/
+
 .header-container {
   width: 100%;
   height: 25%;
@@ -13,13 +22,20 @@
   display: flex;
 
 }
+/*
+
+title container and container content styles
+    located: top left of App
+    contains: app title
+              ,current date
+
+*/
 
 .title-date-container {
   width: 60%;
   height: 100%;
   background-color: yellow;
   border:1px solid black;
-
 
 }
 
@@ -45,6 +61,7 @@ progress container and container content styles
 .total-pending-container {
   width: 100%;
   border:1px solid black;
+  margin: auto;
   display: flex;
 }
 
@@ -58,12 +75,58 @@ progress container and container content styles
   width: 50%;
   border:1px solid black;
 
-
 }
 
 .completed-percentage-container {
   width: 100%;
-  height: 10%;
   border:1px solid black;
 
+}
+
+/*
+
+content container and container content styles
+          SECOND BIG DIV
+    located: top right of App
+    contains: total todo count
+              ,pending todo count
+              ,completed todo's Percentage
+*/
+
+
+.content-container {
+  height: 75%;
+  background-color: green;
+  border:1px solid red;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.form-input {
+  width: 90%;
+
+}
+
+.form-button {
+  width: auto;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.completed-clear-container {
+  display: flex;
+}
+
+.completed-todos {
+  width: 50%;
+}
+
+.clear-completed-todos {
+  width: 50%;
+  align-self: center;
 }

@@ -67,10 +67,10 @@ class App extends Component {
                   <div className="progress-container">
                     <div className="total-pending-container">
                       <div className="total-todos">
-                          <p>  All Todos { this.state.todos.length }</p>
+                          <p>  Total { this.state.todos.length }</p>
                       </div>
                       <div className="pending-todos">
-                        <p> Pending Todos{ this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+                        <p> Pending { this.state.todos.filter((todo) => { return !todo.done }).length }</p>
                       </div>
                     </div>
                     <div className="completed-percentage-container">
@@ -83,24 +83,32 @@ class App extends Component {
 
           <div className="form-container">
                   <form onSubmit={this.handleSubmit.bind(this)} >
-                    <input placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
-                    <button> Add </button>
+                    <input className="form-input" placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
+                    <button className="form-button"> Add </button>
                   </form>
           </div>
 
           <div className="list-container">
-                  <h3> Todo's </h3>
-                  <DisplayList
-                    handleDone={this.handleDone.bind(this)}
-                    handleDelete={this.handleDelete.bind(this)}
-                    todos={this.state.todos}
-                  />
+                  <div className="list-title">
+                    <p> Todo's </p>
+                  </div>
+                  <div className="list-items">
+                    <DisplayList
+                      handleDone={this.handleDone.bind(this)}
+                      handleDelete={this.handleDelete.bind(this)}
+                      todos={this.state.todos}
+                    />
+                  </div>
           </div>
           <div className="completed-clear-container">
-                  <p> Finished Todos { this.state.todos.filter((todo) => { return todo.done }).length }</p>
-                  <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
-                      CLEAR
-                  </a>
+                  <div className="completed-todos">
+                      <p> Finished Todos { this.state.todos.filter((todo) => { return todo.done }).length }</p>
+                  </div>
+                  <div className="clear-completed-todos">
+                      <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
+                          CLEAR
+                      </a>
+                  </div>
           </div>
         </div>
       </div>
