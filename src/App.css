@@ -100,40 +100,50 @@ content container and container content styles
 
 .content-container {
   height: 75%;
-  border:1px solid red;
   display: flex;
   flex-direction: column;
-
 }
 
 .form-container {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 
 }
 
-.form-input {
-  width: 90%;
-  height: 35px;
-  background: #1E90FF;
 
+.form-input {
+  width: 89%;
+  height: 55px;
+  background: #1E90FF;
+  margin: 0;
+  padding: 0;
 }
 
 .form-button {
-  width: 40px;
-  height: 40px;
-  background-size: contain;
+  width: 51px;
+  height: 51px;
+  background-size: cover;
   border-radius: 19px;
-  align-items: center;
   background-color: darkblue;
-  position: absolute;
-  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.add-icon {
+  align-self: center;
 
 }
+
 
 .list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+}
+
+.list-title {
+  width: 100%;
+}
+
+.list-items {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }

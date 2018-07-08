@@ -85,10 +85,10 @@ class App extends Component {
 
         <div className="content-container">
 
-          <div className="form-container">
-                  <form onSubmit={this.handleSubmit.bind(this)} >
+          <div>
+                  <form className="form-container" onSubmit={this.handleSubmit.bind(this)} >
                     <input className="form-input" placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
-                    <button className="form-button"> <img className="add-icon" src= {AddIcon} /> </button>
+                    <button className="form-button"><img className="add-icon" src={AddIcon}/></button>
                   </form>
           </div>
 
