@@ -81,7 +81,6 @@ class App extends Component {
                       <p className="completed-percentage"> Completed Percentage </p>
                     </div>
                   </div>
-
         </div>
 
         <div className="content-container">
