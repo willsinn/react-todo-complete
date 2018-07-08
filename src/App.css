@@ -105,21 +105,38 @@ content container and container content styles
 
 .content-container {
   height: 75%;
-  background-color: green;
   border:1px solid red;
   display: flex;
   flex-direction: column;
 
 }
 
+.form-container {
+  display: inline-block;
+
+}
 
 .form-input {
   width: 90%;
+  height: 35px;
+  background: #1E90FF;
 
 }
 
 .form-button {
-  width: auto;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  position: absolute;
+  border-radius: 19px;
+  align-items: center;
+  background-color: darkblue;
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.add-icon {
+
+
 }
 
 .list-container {

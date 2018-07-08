@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import DisplayList from './Components/DisplayList';
 import HeaderBackground from './Images/HeaderBackground.jpg';
+import AddIcon from './Images/AddIcon.svg';
 
 class App extends Component {
   constructor(props) {
@@ -88,7 +89,7 @@ class App extends Component {
           <div className="form-container">
                   <form onSubmit={this.handleSubmit.bind(this)} >
                     <input className="form-input" placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
-                    <button className="form-button"> Add </button>
+                    <button className="form-button"> <img className="add-icon" src= {AddIcon} /> </button>
                   </form>
           </div>
 
