@@ -28,7 +28,7 @@ header container and container content styles
   background-size: cover;
   position: absolute;
   z-index: -1;
-  
+
 }
 /*
 
@@ -40,9 +40,10 @@ title container and container content styles
 */
 
 .title-date-container {
-  width: 70%;
+  width: 60%;
   height: 100%;
   border:1px solid black;
+  opacity: 0.5;
 
 }
 
@@ -56,11 +57,12 @@ progress container and container content styles
 */
 
 .progress-container {
-  width: 30%;
+  width: 40%;
   height: 100%;
   border:1px solid black;
   display: flex;
   flex-direction: column;
+  opacity: 1.0;
 
 }
 
@@ -69,6 +71,7 @@ progress container and container content styles
   border:1px solid black;
   margin: auto;
   display: flex;
+
 }
 
 .total-todos {
