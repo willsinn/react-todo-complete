@@ -96,13 +96,12 @@ class App extends Component {
                   <div className="list-title">
                     <p> Todo's </p>
                   </div>
-                  <div className="list-items">
                     <DisplayList
                       handleDone={this.handleDone.bind(this)}
                       handleDelete={this.handleDelete.bind(this)}
                       todos={this.state.todos}
                     />
-                  </div>
+
           </div>
           <div className="completed-clear-container">
                   <div className="completed-todos">

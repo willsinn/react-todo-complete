@@ -133,19 +133,12 @@ content container and container content styles
 .list-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   width: 100%;
 
 }
 
 .list-title {
   width: 100%;
-}
-
-.list-items {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .completed-clear-container {

@@ -47,27 +47,25 @@ class DisplayItem extends Component {
     return(
 
              <li className={todo.done ? 'done': ''}>
-              <div className="display-list-item">
-              <div style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
+              <div className="display-list-item" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
                   <input className="display-item-checkbox"
                      checked={todo.done}
                      onChange={this.props.handleDone.bind(null, todo.title)}
                      type ="checkbox"
                   />
-                  <label>
+                  <label className="display-item-text">
                      { this.state.changedText }
                   </label>
-                  <a href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
+                  <a  className="display-item-done" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
                   <i class="fas fa-minus-circle"></i>
                     </a>
                 </div>
-                <input className="display-item-done" type="text"
+                <input type="text"
                         onKeyDown={this.handleEditingDone.bind(this)}
                         onChange={this.handleEditingChange.bind(this)}
                         style={editStyle}
                         value={this.state.changedText}
                         />
-                </div>
                 <div className="display-item-divider">
                 </div>
              </li>
