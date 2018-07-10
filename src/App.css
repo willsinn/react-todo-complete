@@ -44,26 +44,32 @@ title container and container content styles
 .title-date-container {
   width: 60%;
   height: 100%;
-  opacity: 0.5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
 }
 .title-container {
-  font-family: 'Quicksand', sans-serif;
   align-self: center;
-  font-size: 38px;
-  color: white;
   display: flex;
   flex-direction: column;
   padding-right: 20%;
+  padding-top: 10%;
 }
 
+.title-styles {
+  font-size: 38px;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-weight: 700;
+
+}
+
+
 .date-container {
-  font-family: 'Crimson Text', serif;
   font-size: 15px;
   color: white;
+  font-family: 'Crimson Text', serif;
   padding-left: 8%;
 }
 
@@ -96,19 +102,52 @@ progress container and container content styles
 
 .total-todos {
   width: 50%;
+  padding-top: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 
 }
 
 .pending-todos {
   width: 50%;
+  padding-top: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+}
+
+.progress-number {
+  align-self: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+
+}
+
+.progress-label {
+  align-self: flex-end;
+  color: white;
+  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
 }
 
 .completed-percentage-container {
   width: 100%;
-
+  display: flex;
+  justify-content: center;
 }
 
+.completed-percentage {
+  color: white;
+  font-size: 15px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 500;
+}
 /*
 
 content container and container content styles

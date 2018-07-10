@@ -65,24 +65,27 @@ class App extends Component {
         <div className="header-container">
                   <img className="header-background" src={HeaderBackground} />
                   <div className="title-date-container">
-                     <h1 className="title-container">
-                        <span> Your </span>
-                        <span> Things </span>
-                     </h1>
+                     <div className="title-container">
+                        <span className="title-styles"> Your </span>
+                        <span className="title-styles"> Things </span>
+                     </div>
                      <h3 className="date-container"> <CurrentDate /> </h3>
                   </div>
 
                   <div className="progress-container">
                     <div className="total-pending-container">
                       <div className="total-todos">
-                          <p>  Total { this.state.todos.length }</p>
+                            <span className="progress-number">{ this.state.todos.length }</span>
+                            <span className="progress-label">Total</span>
                       </div>
                       <div className="pending-todos">
-                        <p> Pending { this.state.todos.filter((todo) => { return !todo.done }).length }</p>
+                        <span className="progress-number">{ this.state.todos.filter((todo) => { return !todo.done }).length }</span>
+                        <span className="progress-label">Pending</span>
+
                       </div>
                     </div>
                     <div className="completed-percentage-container">
-                      <p className="completed-percentage"> Completed Percentage </p>
+                      <span className="completed-percentage"> { this.state.todos.filter((todo) => { return todo.done }).length }/{ this.state.todos.length } done</span>
                     </div>
                   </div>
         </div>
