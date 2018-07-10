@@ -114,12 +114,14 @@ class App extends Component {
                 </div>
           <div className="completed-clear-container">
                   <div className="completed-todos">
-                      <p> Completed { this.state.todos.filter((todo) => { return todo.done }).length }</p>
+                      <span>completed </span>
+                      <span className="circle-display">{ this.state.todos.filter((todo) => { return todo.done }).length }</span>
                   </div>
                   <div className="clear-completed-todos">
-                      <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
-                          CLEAR
-                      </a>
+                      <span className="clear-completed-text">clear completed </span>
+                      <button className="clear-completed-button" onClick={ this.handleClearCompleted.bind(this)}>
+                        <i class="fas fa-ban"></i>
+                      </button>
                   </div>
           </div>
         </div>

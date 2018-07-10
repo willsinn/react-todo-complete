@@ -32,8 +32,9 @@ ul {
 }
 
 
-.display-item-done {
+.display-item-destroy {
   flex: 1;
+  padding-right: 1.5%;
 }
 
 

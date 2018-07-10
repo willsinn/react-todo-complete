@@ -57,7 +57,7 @@ class DisplayItem extends Component {
                   <label className="display-item-text">
                      { this.state.changedText }
                   </label>
-                  <a  className="display-item-done" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
+                  <a  className="display-item-destroy" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
                       <i class="far fa-trash-alt"></i>
                   </a>
                 </div>

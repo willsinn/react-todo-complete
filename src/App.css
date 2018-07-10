@@ -229,13 +229,45 @@ content container and container content styles
 
 .completed-clear-container {
   display: flex;
+  width: 100%;
+  padding-top: 2%;
   justify-content: space-between;
+
 
 }
 
 .completed-todos {
+  font-size: 16px;
+  font-family: 'Crimson Text', serif;
+  padding-left: 3%;
+  font-weight: 600;
+  width: 70%;
 }
 
+.circle-display {
+  border-radius: 50%;
+  background-color: lightgray;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  }
+
 .clear-completed-todos {
-  align-self: center;
+  padding-left: 3%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  }
+
+.clear-completed-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+  font-weight: 900;
+
+}
+
+.clear-completed-button {
+    font-size: 92.5%;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
 }
