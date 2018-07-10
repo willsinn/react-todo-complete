@@ -101,6 +101,8 @@ class App extends Component {
                   <div className="list-container">
                   <div className="list-title">
                     <span> Todo's </span>
+                    <div className="list-title-divider">
+                    </div>
                   </div>
                     <DisplayList
                       handleDone={this.handleDone.bind(this)}

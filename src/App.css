@@ -181,6 +181,7 @@ content container and container content styles
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
   margin: auto;
+  text-align: center;
 
 
 }
@@ -200,20 +201,24 @@ content container and container content styles
   flex-direction: column;
   width: 100%;
   padding-top: 2%;
-
 }
 
 .list-title {
   width: 100%;
   font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  font-style: italic;
+  font-size: 21px;
+  font-weight: 900;
+
+}
+
+.list-title-divider {
+  border-top: 2px dotted blue;
 }
 
 .completed-clear-container {
   display: flex;
   justify-content: space-between;
+
 }
 
 .completed-todos {
