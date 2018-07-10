@@ -16,7 +16,7 @@ header container and container content styles
 
 .header-container {
   width: 100%;
-  height: 175px;
+  height: 42.5%;
   display: flex;
 
 }
@@ -87,7 +87,6 @@ progress container and container content styles
   height: 100%;
   display: flex;
   flex-direction: column;
-  opacity: 1.0;
 
 
 }
@@ -96,7 +95,6 @@ progress container and container content styles
   width: 100%;
   margin: auto;
   display: flex;
-  height: 125px;
 
 }
 
@@ -140,6 +138,8 @@ progress container and container content styles
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 10%;
+
 }
 
 .completed-percentage {
@@ -147,6 +147,7 @@ progress container and container content styles
   font-size: 15px;
   font-family: 'Crimson Text', serif;
   font-weight: 500;
+
 }
 /*
 
@@ -166,28 +167,38 @@ content container and container content styles
 }
 
 .form-container {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  height: 28%;
 
+
+}
+
+.form-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 .form-input {
-  width: 89%;
-  height: 55px;
-  background: #1E90FF;
-  margin: 0;
-  padding: 0;
+  width: 93.5%;
+  height: inherit;
+  background: #e6f2ff;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  margin: auto;
+
+
 }
 
 .form-button {
-  width: 51px;
-  height: 51px;
-  background-size: cover;
-  border-radius: 19px;
-  background-color: darkblue;
-  align-self: center;
-
+  width: 5.1%;
+  height: 5.1%;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 
