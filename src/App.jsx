@@ -92,24 +92,22 @@ class App extends Component {
 
         <div className="content-container">
 
-          <div className="form-container">
-                  <form className="form-form" onSubmit={this.handleSubmit.bind(this)} >
+                  <form className="form-container" onSubmit={this.handleSubmit.bind(this)} >
                     <input className="form-input" placeholder="New Todos" onChange={this.handleChange.bind(this)} value={this.state.title} />
                     <button className="form-button"><img className="add-icon" src={AddIcon}/></button>
                   </form>
-          </div>
 
-          <div className="list-container">
+
+                  <div className="list-container">
                   <div className="list-title">
-                    <p> Todo's </p>
+                    <span> Todo's </span>
                   </div>
                     <DisplayList
                       handleDone={this.handleDone.bind(this)}
                       handleDelete={this.handleDelete.bind(this)}
                       todos={this.state.todos}
                     />
-
-          </div>
+                    </div>
           <div className="completed-clear-container">
                   <div className="completed-todos">
                       <p> Completed { this.state.todos.filter((todo) => { return todo.done }).length }</p>
