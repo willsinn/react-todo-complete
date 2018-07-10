@@ -22,14 +22,17 @@ ul {
 }
 
 .display-item-checkbox {
+  flex: 1;
 }
 
 
 .display-item-text {
+  flex: 12;
 }
 
 
 .display-item-done {
+  flex: 1;
 }
 
 

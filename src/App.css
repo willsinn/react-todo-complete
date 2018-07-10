@@ -143,13 +143,12 @@ content container and container content styles
 
 .completed-clear-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .completed-todos {
-  width: 50%;
 }
 
 .clear-completed-todos {
-  width: 50%;
   align-self: center;
 }

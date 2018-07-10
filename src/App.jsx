@@ -105,7 +105,7 @@ class App extends Component {
           </div>
           <div className="completed-clear-container">
                   <div className="completed-todos">
-                      <p> Finished Todos { this.state.todos.filter((todo) => { return todo.done }).length }</p>
+                      <p> Completed { this.state.todos.filter((todo) => { return todo.done }).length }</p>
                   </div>
                   <div className="clear-completed-todos">
                       <a href='/' onClick={ this.handleClearCompleted.bind(this)}>
