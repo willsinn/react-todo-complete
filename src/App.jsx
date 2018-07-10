@@ -3,6 +3,7 @@ import './App.css';
 import DisplayList from './Components/DisplayList';
 import HeaderBackground from './Images/HeaderBackground.jpg';
 import AddIcon from './Images/AddIcon.svg';
+import CurrentDate from './Components/CurrentDate';
 
 class App extends Component {
   constructor(props) {
@@ -64,8 +65,11 @@ class App extends Component {
         <div className="header-container">
                   <img className="header-background" src={HeaderBackground} />
                   <div className="title-date-container">
-                     <h1> Your Things </h1>
-                     <h3> Current Date </h3>
+                     <h1 className="title-container">
+                        <span> Your </span>
+                        <span> Things </span>
+                     </h1>
+                     <h3 className="date-container"> <CurrentDate /> </h3>
                   </div>
 
                   <div className="progress-container">
