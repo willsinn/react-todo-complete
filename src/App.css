@@ -252,10 +252,10 @@ content container and container content styles
   }
 
 .clear-completed-todos {
-  padding-left: 3%;
-  width: 30%;
+  width: 29%;
   display: flex;
   justify-content: space-around;
+  padding-right: 1.5%;
   }
 
 .clear-completed-text {
