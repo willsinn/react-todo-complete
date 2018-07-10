@@ -16,8 +16,8 @@ class DisplayItem extends Component {
   }
 
   handleEditing(event) {
-
     this.setState({ editing: true, changedText: this.props.todo.title });
+    alert("Press Enter When Done Editing!");
   }
 
   handleEditingDone(event) {
@@ -47,6 +47,7 @@ class DisplayItem extends Component {
     return(
 
              <li className={todo.done ? 'done': ''}>
+              <div className="display-list-wrapper">
               <div className="display-list-item" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
                   <input className="display-item-checkbox"
                      checked={todo.done}
@@ -57,16 +58,18 @@ class DisplayItem extends Component {
                      { this.state.changedText }
                   </label>
                   <a  className="display-item-done" href="/" onClick= { this.props.handleDelete.bind(null, todo.title)}>
-                  <i class="fas fa-minus-circle"></i>
-                    </a>
+                      <i class="far fa-trash-alt"></i>
+                  </a>
                 </div>
-                <input type="text"
+                <input className="display-item-editing"
+                        type="text"
                         onKeyDown={this.handleEditingDone.bind(this)}
                         onChange={this.handleEditingChange.bind(this)}
                         style={editStyle}
                         value={this.state.changedText}
                         />
-                <div className="display-item-divider">
+                        <div className="display-item-divider">
+                </div>
                 </div>
              </li>
 

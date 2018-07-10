@@ -180,9 +180,9 @@ content container and container content styles
   background: #e6f2ff;
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
+  font-style: italic;
   margin: auto;
-  text-align: center;
-
+  padding-left: 2%;
 
 }
 
@@ -200,7 +200,7 @@ content container and container content styles
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 2%;
+  padding-top: 3%;
 }
 
 .list-title {
@@ -208,11 +208,23 @@ content container and container content styles
   font-family: 'Quicksand', sans-serif;
   font-size: 21px;
   font-weight: 900;
+  margin-left: 16%;
 
 }
 
 .list-title-divider {
-  border-top: 2px dotted blue;
+  border-top: 1.5px dotted #00008B;
+  padding-top: 1%;
+  border-bottom: 1.5px solid #00008B;
+
+}
+
+.display-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1%;
+
 }
 
 .completed-clear-container {

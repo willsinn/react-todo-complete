@@ -5,19 +5,17 @@ ul {
 }
 
 
-.display-list-wrapper {
 
-}
 
 
 .display-list-item {
-  height: 35px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid black;
+  padding: .7%;
   justify-content: space-between;
+  margin-bottom: 2%;
 
 }
 
@@ -27,7 +25,10 @@ ul {
 
 
 .display-item-text {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 19px;
   flex: 12;
+  padding-left: 9%;
 }
 
 
@@ -38,5 +39,25 @@ ul {
 
 
 .display-item-divider {
-  border-top: 5px solid DeepSkyBlue;
+  border-top: 1px solid DeepSkyBlue;
+  width: 80%;
+  align-self: center;
+  }
+
+.display-item-editing {
+  font-family: 'Oxygen', sans-serif;
+  background: #e6f2ff;
+  font-style: italic;
+  color: gray;
+  font-size: 19px;
+  padding-left: 2%;
+  margin: 2%;
+
+}
+
+i {
+    font-size: 150%;
+    color: black;
+    margin: 0;
+    padding: 0;
 }

@@ -100,16 +100,18 @@ class App extends Component {
 
                   <div className="list-container">
                   <div className="list-title">
-                    <span> Todo's </span>
-                    <div className="list-title-divider">
-                    </div>
+                      <span> Todo's </span>
+
                   </div>
+                  <div className="list-title-divider"></div>
+                  <div className="display-list-wrapper">
                     <DisplayList
                       handleDone={this.handleDone.bind(this)}
                       handleDelete={this.handleDelete.bind(this)}
                       todos={this.state.todos}
                     />
-                    </div>
+                  </div>
+                </div>
           <div className="completed-clear-container">
                   <div className="completed-todos">
                       <p> Completed { this.state.todos.filter((todo) => { return todo.done }).length }</p>
