@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './DisplayOutput.css';
+import { Checkbox } from 'react-mdl';
 
 
 
@@ -49,11 +50,15 @@ class DisplayItem extends Component {
              <li className={todo.done ? 'done': ''}>
               <div className="display-list-wrapper">
               <div className="display-list-item" style={viewStyle} onDoubleClick={this.handleEditing.bind(this)}>
+                  
                   <input className="display-item-checkbox"
                      checked={todo.done}
                      onChange={this.props.handleDone.bind(null, todo.title)}
                      type ="checkbox"
-                  />
+                     label="With ripple"
+                     />
+
+
                   <label className="display-item-text">
                      { this.state.changedText }
                   </label>
